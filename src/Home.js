@@ -11,7 +11,7 @@ class Home extends React.Component {   //page1クラスにReact.Componentを継�
           
                 </header>
                 <section>
-            ホーム画面です
+            ホーム画面です--
             
             </section>
             </div>
