@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { fade, makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -18,9 +18,8 @@ import {Link} from 'react-router-dom';
 //import Home from './Home'
 import ListItemText from '@material-ui/core/ListItemText';
 //import { BrowserRouter as Router, Route} from 'react-router-dom';
-import SearchIcon from '@material-ui/icons/Search';
+
 //import QuizList from './Hakone＿Quiz/QuizList';
-import InputBase from '@material-ui/core/InputBase';
 
 const drawerWidth = 240;
 
@@ -79,30 +78,6 @@ const useStyles = makeStyles((theme) => ({
     }),
     marginLeft: 0,
   },
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: fade(theme.palette.common.white, 0.15),
-    '&:hover': {
-      backgroundColor: fade(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
-      width: 'auto',
-    },
-  },
-  searchIcon: {
-    padding: theme.spacing(0, 18),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
 }));
 
 export default function Navbar() {
@@ -141,23 +116,7 @@ export default function Navbar() {
           <Typography variant="h6" noWrap>
             <h1>陸上長距離&アニメのクイズサイト</h1>
           </Typography>
-          <Typography>
-          <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-            </div>
-            </Typography>
         </Toolbar>
-       
       </AppBar>
       <Drawer
         className={classes.drawer}

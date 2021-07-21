@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import Navbar from './Navbar';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { LikeButton } from './LikeButton';
+import QuizComment from './QuizComment';
 
 function QuestionPage({ QuestionLists }) {
   const [qLIsts, setqLists] = useState(QuestionLists)
@@ -25,12 +27,17 @@ function QuestionPage({ QuestionLists }) {
               })}
             </div>
             {selectedAnswer && <div>{Correct === selectedAnswer ? '正解' : '不正解'}</div>}
+            <LikeButton />
           </div>
         )
       })}
+      　<QuizComment />
+
     </div>
+    
   )
 }
+
 
 QuestionPage.propTypes = {
   QuestionLists:PropTypes.func
